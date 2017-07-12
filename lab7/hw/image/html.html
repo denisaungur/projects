@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+function load(){
+	var images = document.getElementById("old").childNodes;
+	window.alert(images.length);
+	for (var i=1; i < 5; i++){
+		if( i == 4 ){
+			document.getElementById("div").appendChild("<br><br>");
+			document.getElementById("div").appendChild(document.getElementById(i));
+		}
+		else{
+			document.getElementById("div").appendChild(document.getElementById(i));
+		}
+	
+	}
+	
+}
+
+
+</script>
+</head>
+
+<body onload="load()">
+<div id="old">
+<img id="1" src='img1.jpg'>
+<img id="2" src="img2.jpg">
+<img id="3" src="img3.jpg">
+<img id="4" src="img4.jpg">
+</div>
+<div id="div">
+<div>
+</body>
+</html>

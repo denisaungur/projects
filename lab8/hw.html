@@ -1,0 +1,84 @@
+<html>
+<head>
+</head>
+<script src="jquery-2.2.3.js"></script>
+<script>
+$(document).ready(function (){
+	$("h1").css({'color':'red'});
+	$("li").css({'text-decoration':'none', 'display':'inline-block', 'font-size':'20', 'padding-left':'30px', 'background-color':'yellow', 'padding-right':'30px'});
+	$('.tab').css({'width': '50%', 'height':'20px', 'padding-left':'50px'});
+	$("div").hide();
+	$('#l1').click(function(){
+		$("li").css({'text-decoration':'none', 'display':'inline-block', 'font-size':'20', 'padding-left':'30px', 'background-color':'yellow', 'padding-right':'30px'});
+		$("div").hide();
+		$('#tab1').show();
+		$('#l1').css({'background-color':'white','text-decoration':'underline'});
+	
+	})
+	$('#l2').click(function(){
+		$("li").css({'text-decoration':'none', 'display':'inline-block', 'font-size':'20', 'padding-left':'30px', 'background-color':'yellow', 'padding-right':'30px'});
+		$("div").hide();
+		$('#tab2').show();
+		$('#l2').css({'background-color':'white','text-decoration':'underline'});
+	
+	})
+	$('#l3').click(function(){
+		$("li").css({'text-decoration':'none', 'display':'inline-block', 'font-size':'20', 'padding-left':'30px', 'background-color':'yellow', 'padding-right':'30px'});
+		$("div").hide();
+		$('#tab3').show();
+		$('#l3').css({'background-color':'white','text-decoration':'underline'});
+	
+	})
+	$('#l4').click(function(){
+		$("li").css({'text-decoration':'none', 'display':'inline-block', 'font-size':'20', 'padding-left':'30px', 'background-color':'yellow', 'padding-right':'30px'});
+		$("div").hide();
+		$('#tab4').show();
+		$('#l4').css({'background-color':'white','text-decoration':'underline'});
+	
+	})
+	$('#l5').click(function(){
+		$("li").css({'text-decoration':'none', 'display':'inline-block', 'font-size':'20', 'padding-left':'30px', 'background-color':'yellow', 'padding-right':'30px'});
+		$("div").hide();
+		$('#tab5').show();
+		$('#l5').css({'background-color':'white','text-decoration':'underline'});
+	
+	})
+})
+</script>
+<body>
+<h1> City Breaks </h1>
+
+<ul>
+	<li id="l1" >England </li>
+	<li id='l2'>France </li>
+	<li id='l3'>Italy </li>
+	<li id='l4'>Spain</li>
+	<li id='l5'>Switzerland </li>
+</ul> 
+<div  class="tab" id="tab1">
+	<p> London / Birmingham</p>
+	<img src='london.jpg'>
+	<img src='birm.jpg'>
+</div>
+<div  class="tab" id="tab2">
+	<p> Paris / Lyon</p>
+	<img src='paris.jpg'>
+	<img src='download.jpg'>
+</div>
+<div  class="tab" id="tab3">
+	<p> Milan / Rome</p>
+	<img src='milan.jpg'>
+	<img src='rome.jpg'>
+</div>
+<div  class="tab" id="tab4">
+	<p> Madrid / Palma</p>
+	<img src="madrid.jpg">
+	<img src='palma.jpg'>
+</div>
+<div  class="tab" id="tab5">
+	<p> Geneva / Bern </p>
+	<img src='geneva.jpg'>
+	<img src='bern.jpg'>
+</div>
+</body>
+</html>

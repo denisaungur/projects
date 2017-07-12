@@ -1,0 +1,156 @@
+JFDML JFormDesigner: "6.0.1.0.112" Java: "1.8.0_112-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"background": new java.awt.Color( 0, 0, 0, 255 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "mainPanel"
+				"background": sfield java.awt.Color darkGray
+				add( new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+					name: "menuBar1"
+					"background": sfield java.awt.Color darkGray
+					"borderPainted": false
+					"foreground": sfield java.awt.Color white
+					add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+						name: "filters"
+						"text": "Filters"
+						"background": new java.awt.Color( 102, 102, 102, 255 )
+						"borderPainted": false
+						"foreground": sfield java.awt.Color white
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "blur"
+							"text": "Blur"
+							"foreground": sfield java.awt.Color white
+							"background": sfield java.awt.Color darkGray
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "blurActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "edgeDetection"
+							"text": "Edge Detection"
+							"background": sfield java.awt.Color darkGray
+							"foreground": sfield java.awt.Color white
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "edgeDetectionActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "glow"
+							"text": "Glow Filter"
+							"background": sfield java.awt.Color darkGray
+							"foreground": sfield java.awt.Color white
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "glowActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "blackAndWhite"
+							"text": "Black and White"
+							"background": sfield java.awt.Color darkGray
+							"foreground": sfield java.awt.Color white
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "blackAndWhiteActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "contrast"
+							"text": "Brightness & Contrast"
+							"background": sfield java.awt.Color darkGray
+							"foreground": sfield java.awt.Color white
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "contrastActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "greyScale"
+							"text": "Grey Scale"
+							"background": sfield java.awt.Color darkGray
+							"foreground": sfield java.awt.Color white
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "greyScaleActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "negative"
+							"text": "Negative"
+							"background": sfield java.awt.Color darkGray
+							"foreground": sfield java.awt.Color white
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "negativeActionPerformed", true ) )
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+						name: "options"
+						"text": "Options"
+						"foreground": sfield java.awt.Color white
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "upload"
+							"text": "Upload Image"
+							"foreground": sfield java.awt.Color white
+							"background": sfield java.awt.Color darkGray
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "uploadActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "histogram"
+							"text": "Histogram"
+							"background": sfield java.awt.Color darkGray
+							"foreground": sfield java.awt.Color white
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "histogramActionPerformed", true ) )
+						} )
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 103
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "image"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"y": 50
+					"x": 10
+					"height": 600
+					"width": 500
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "result"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 555
+					"y": 50
+					"width": 500
+					"height": 600
+				} )
+				add( new FormComponent( "javax.swing.JSlider" ) {
+					name: "blackWhiteSlider"
+					"foreground": sfield java.awt.Color white
+					"background": sfield java.awt.Color darkGray
+					"maximum": 255
+					"visible": false
+					"value": 127
+					addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "blackWhiteSliderStateChanged", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 370
+					"y": 25
+					"height": 16
+				} )
+				add( new FormComponent( "javax.swing.JSlider" ) {
+					name: "contrastSlider"
+					"background": sfield java.awt.Color darkGray
+					"foreground": sfield java.awt.Color white
+					"visible": false
+					"maximum": 200
+					addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "contrastSliderStateChanged", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 415
+					"y": 20
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "save"
+					"text": "Save"
+					"background": sfield java.awt.Color darkGray
+					"foreground": sfield java.awt.Color white
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 1065
+					"y": 140
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 1200
+				"height": 700
+				"x": 0
+				"y": -5
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 35, 20 )
+			"size": new java.awt.Dimension( 1120, 685 )
+		} )
+	}
+}

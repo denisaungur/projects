@@ -1,0 +1,8 @@
+ID 10
+Stack
+SymTable
+da->1
+Output 
+2000
+Heap 
+1->200
